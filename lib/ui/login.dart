@@ -70,7 +70,7 @@ class LoginState extends State<Login> {
             content: Text("กรุณาระบุ user or password"),
           ));
         } else if ("admin" == user.text &&
-            "1234" == pass.text) {
+            "admin" == pass.text) {
             Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
         } else {
           _scaffoldKey.currentState.showSnackBar(new SnackBar(
