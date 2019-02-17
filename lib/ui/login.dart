@@ -63,10 +63,7 @@ class LoginState extends State<Login> {
 
   RaisedButton loginButton() {
     return RaisedButton(
-      child: Text("LOGIN", style: TextStyle(color: Colors.black)),
-       elevation: 4.0,
-      color: Theme.of(context).accentColor,
-      splashColor: Colors.blueGrey,
+      child: Text("LOGIN", style: TextStyle(color: Colors.pink)),
       onPressed: () {
         if (user.text == '' || pass.text == '') {
           _scaffoldKey.currentState.showSnackBar(new SnackBar(

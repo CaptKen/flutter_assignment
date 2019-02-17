@@ -46,8 +46,8 @@ class RegisterState extends State<Register> {
       controller: pass1,
       decoration: InputDecoration(
         icon: Icon(Icons.lock),
-        labelText: "Confirm Password",
-        hintText: "Input your password",
+        labelText: "Confirm Password Again",
+        hintText: "Input your password To Confirm",
       ),
       keyboardType: TextInputType.text,
       obscureText: true,
@@ -56,11 +56,9 @@ class RegisterState extends State<Register> {
 
   RaisedButton register() {
     return RaisedButton(
-      color: Theme.of(context).accentColor,
-      splashColor: Colors.pink,
       child: Text(
         "Continue",
-        style: TextStyle(color: Colors.black),
+        style: TextStyle(color: Colors.pink),
       ),
       onPressed: () {
         if(new_user_id.text == "admin"){
@@ -73,7 +71,7 @@ class RegisterState extends State<Register> {
         }else if(pass1.text == "" || pass2.text == "" || new_user_id.text == ""){
           _scaffoldKey.currentState.showSnackBar(
             new SnackBar(
-              content: Text("กรุณาระบุข้อมูลให้ครบถ้วน"),
+              content: Text("ระบุข้อมูลให้ครบ"),
             )
           );
         }else if(pass1.text != pass2.text && new_user_id.text != ""){
